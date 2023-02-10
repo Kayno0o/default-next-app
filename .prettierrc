@@ -1,7 +1,16 @@
 {
-  "printWidth": 120,
-  "singleQuote": true,
-  "tabWidth": 2,
   "semi": true,
-  "endOfLine": "auto"
+  "singleQuote": true,
+  "plugins": [
+    "prettier-plugin-tailwindcss"
+  ],
+  "bracketSpacing": true,
+  "tailwindConfig": "./tailwind.config.js",
+  "printWidth": 120,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "bracketSameLine": false,
+  "arrowParens": "always",
+  "endOfLine": "auto",
+  "htmlWhitespaceSensitivity": "ignore"
 }
