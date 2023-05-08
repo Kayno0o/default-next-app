@@ -8,7 +8,7 @@ type NavbarLinkProps = {
 
 const NavbarLink = (props: NavbarLinkProps) => {
   return (
-    <Link className="font-bold text-violet-400" href={props.href}>
+    <Link className="font-bold" href={props.href}>
       {props.children}
     </Link>
   );

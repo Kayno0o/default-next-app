@@ -1,12 +1,15 @@
 import React from 'react';
 import type { NextPage } from 'next';
-import Layout from '../components/layout/Layout';
+import Container from '../components/base/Container';
+import H1 from '../components/base/H1';
 
 const Home: NextPage = () => {
   return (
-    <Layout>
-      <div className="container">blblbl</div>
-    </Layout>
+    <>
+      <Container>
+        <H1>blblbl</H1>
+      </Container>
+    </>
   );
 };
 

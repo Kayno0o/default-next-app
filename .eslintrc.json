@@ -23,14 +23,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": [
-    "@typescript-eslint",
-    "unused-imports",
-    "react",
-    "sort-exports",
-    "sort-keys-fix",
-    "typescript-sort-keys"
-  ],
+  "plugins": ["@typescript-eslint", "unused-imports", "react", "sort-exports", "sort-keys-fix", "typescript-sort-keys"],
   "rules": {
     "@next/next/no-img-element": "off",
     "no-unused-vars": "off",
