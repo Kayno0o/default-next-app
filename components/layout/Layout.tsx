@@ -11,7 +11,7 @@ const Layout = (props: LayoutProps): ReactElement => {
   return (
     <div
       className={twMerge(
-        'flex min-h-screen flex-col bg-black text-white',
+        'flex min-h-[100svh] flex-col bg-black text-white',
         'focus-visible:all-child:outline-none focus-visible:all-child:ring-2 focus-visible:all-child:ring-amber-600',
       )}
     >
