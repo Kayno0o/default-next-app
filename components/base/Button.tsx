@@ -7,6 +7,7 @@ type BaseButtonProps = {
   children: any;
   className?: string;
   loading?: boolean;
+  disabled?: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   small?: boolean;
   type?: 'button' | 'submit' | 'reset';
@@ -17,12 +18,12 @@ const Button = (props: BaseButtonProps) => (
     type={props.type}
     className={twMerge(
       'relative w-fit cursor-pointer rounded-full bg-white px-6 py-1 font-bold text-black transition-colors duration-300 hover:bg-amber-300',
-      props.loading && 'cursor-not-allowed',
+      (props.loading || props.disabled) && 'cursor-not-allowed',
       props.small && 'px-4 py-0.5 text-sm',
       props.className,
     )}
     onClick={props.onClick}
-    disabled={props.loading}
+    disabled={props.loading || props.disabled}
   >
     <div className={props.loading ? 'opacity-0' : ''}>{props.children}</div>
     {props.loading && (
