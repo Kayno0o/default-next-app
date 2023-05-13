@@ -12,8 +12,7 @@
     "plugin:@next/next/recommended",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:typescript-sort-keys/recommended"
+    "plugin:react-hooks/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -23,7 +22,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "unused-imports", "react", "sort-exports", "sort-keys-fix", "typescript-sort-keys"],
+  "plugins": ["@typescript-eslint", "unused-imports", "react", "sort-exports"],
   "rules": {
     "@next/next/no-img-element": "off",
     "no-unused-vars": "off",
@@ -59,8 +58,6 @@
         "sortDir": "asc"
       }
     ],
-    "sort-vars": "warn",
-    "sort-keys": "warn",
-    "sort-keys-fix/sort-keys-fix": "warn"
+    "sort-vars": "warn"
   }
 }

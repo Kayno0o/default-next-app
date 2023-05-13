@@ -18,7 +18,7 @@ const Toast = (props: ToastProps) => {
         className={twMerge(
           'relative flex w-fit gap-2 rounded-md border-l-8 bg-white py-3 pl-3 pr-10',
           ToastColor[props.type].border,
-          props.open ? 'animate-fade-from-left' : 'animate-fade-to-left',
+          props.open ? 'animate-toast-fade-in' : 'animate-toast-fade-out',
         )}
       >
         <FontAwesomeIcon
