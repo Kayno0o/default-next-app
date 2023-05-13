@@ -7,11 +7,8 @@ type ToastManagerProps = {
   children: React.ReactNode;
 };
 
-export const ToastContext = React.createContext<{
-  addToast: (message: string, type: ToastType) => void;
-  removeToast: (id: string) => void;
-}>({
-  addToast: () => {},
+export const ToastContext = React.createContext({
+  addToast: (_message: string, _type: ToastType) => {},
   removeToast: (_id: string) => {},
 });
 
@@ -79,7 +76,7 @@ const ToastManager = ({ children }: ToastManagerProps) => {
 
   return (
     <ToastContext.Provider value={{ addToast, removeToast }}>
-      <div className="absolute left-4 top-4 z-50 flex flex-col gap-3">
+      <div className="absolute left-4 top-4 z-50 flex flex-col-reverse gap-3">
         {Object.entries(toasts).map(([id, toast]) => (
           <Toast key={id} {...toast} removeToast={() => removeToast(id)} />
         ))}

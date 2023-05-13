@@ -5,11 +5,11 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'toast-fade-in-left': 'toast-fade-in-left 0.3s ease-out',
-        'toast-fade-out-left': 'toast-fade-out-left 0.3s ease-out',
+        'fade-from-left': 'fade-from-left 0.3s ease-out',
+        'fade-to-left': 'fade-to-left 0.3s ease-out',
       },
       keyframes: {
-        'toast-fade-in-left': {
+        'fade-from-left': {
           '0%': {
             opacity: '0',
             transform: 'translateX(-100%)',
@@ -19,7 +19,7 @@ module.exports = {
             transform: 'translateX(0)',
           },
         },
-        'toast-fade-out-left': {
+        'fade-to-left': {
           '0%': {
             opacity: '1',
             transform: 'translateX(0)',
