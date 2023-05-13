@@ -32,6 +32,8 @@ const ToastManager = ({ children }: ToastManagerProps) => {
           [action.id]: action.toast,
         };
       case 'close':
+        if (!state[action.id]) return state;
+
         return {
           ...state,
           [action.id]: {
@@ -40,6 +42,8 @@ const ToastManager = ({ children }: ToastManagerProps) => {
           },
         };
       case 'remove':
+        if (!state[action.id]) return state;
+
         const newState = { ...state };
         delete newState[action.id];
         return newState;
