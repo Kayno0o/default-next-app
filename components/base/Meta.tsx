@@ -58,15 +58,11 @@ const Meta = (props: MetaProps) => {
       <meta property="og:url" content={getUrl()} />
       <meta property="og:locale" content={props.locale || 'en_US'} />
       <meta property="og:site_name" content="Kayn.ooo" />
-      <meta property="og:image" content={props.src || 'https://kayn.ooo/images/og-image.png'} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
 
-      <meta property="twitter:title" content={getTitle()} />
-      <meta property="twitter:description" content={getDesc()} />
+      <meta property="og:image" content={props.src || 'https://kayn.ooo/images/og-image.png'} />
+      <meta property="og:image:secure_url" content={props.src || 'https://kayn.ooo/images/og-image.png'} />
+
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@kayn_ooo" />
-      <meta name="twitter:creator" content="@kayn_ooo" />
       <meta name="twitter:image" content={props.src || 'https://kayn.ooo/images/og-image.png'} />
 
       <link rel="icon" href="/favicon.ico" />
