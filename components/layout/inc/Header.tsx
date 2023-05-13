@@ -3,8 +3,7 @@ import Link from 'next/link';
 import Container from '../../base/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBurger, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { twMerge } from 'tailwind-merge';
-import BaseLink from '../../base/BaseLink';
+import NavBar from './NavBar';
 
 const Header = () => {
   const [burger, setBurger] = React.useState(false);
@@ -24,16 +23,7 @@ const Header = () => {
           Kayn.ooo
         </Link>
 
-        <nav
-          className={twMerge(
-            'grow flex-col gap-6 md:flex md:flex-row',
-            burger ? 'flex basis-full items-center md:basis-[initial] md:text-left' : 'hidden',
-          )}
-        >
-          <BaseLink onClick={() => setBurger(false)} href="/">
-            Home
-          </BaseLink>
-        </nav>
+        <NavBar burger={burger} setBurger={setBurger} />
       </Container>
     </header>
   );

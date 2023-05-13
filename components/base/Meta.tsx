@@ -7,6 +7,7 @@ type MetaProps = {
   noindex?: boolean;
   src?: string;
   title?: string;
+  keywords?: string[];
 };
 
 const Meta = (props: MetaProps) => {
@@ -21,7 +22,7 @@ const Meta = (props: MetaProps) => {
 
   useEffect(() => {
     document.querySelector('html')?.setAttribute('lang', props.lang || 'en');
-  }, [props.lang, props.noindex]);
+  }, [props.lang]);
 
   return (
     <Head>
@@ -33,6 +34,7 @@ const Meta = (props: MetaProps) => {
       <meta name="theme-color" content="#363636" />
 
       <meta name="description" content={getDesc()} />
+      <meta name="keywords" content={props.keywords?.join(', ')} />
 
       <meta property="og:title" content={getTitle()} />
       <meta property="og:description" content={getDesc()} />

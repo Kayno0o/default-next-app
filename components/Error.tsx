@@ -7,6 +7,7 @@ type ErrorProps = {
   children: React.ReactNode;
   code: string;
   src: string;
+  alt: string;
 };
 
 const Error = (props: ErrorProps) => (
@@ -18,7 +19,7 @@ const Error = (props: ErrorProps) => (
         Error <span className="text-red-400">{props.code}</span>
       </H1>
 
-      <img className="w-full max-w-lg" src={props.src} alt="Black cat looking around" />
+      <img className="w-full max-w-lg" src={props.src} alt={props.alt} />
 
       <p>{props.children}</p>
     </Container>

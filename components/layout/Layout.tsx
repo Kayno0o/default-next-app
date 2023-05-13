@@ -17,7 +17,7 @@ const Layout = (props: LayoutProps): ReactElement => {
     >
       <Header />
 
-      <div className="mt-12">{props.children}</div>
+      <main className="mt-12">{props.children}</main>
 
       <Footer />
     </div>
