@@ -1,17 +1,17 @@
-import React from 'react';
-import Container from '../components/base/Container';
-import H1 from '../components/base/H1';
-import Meta from './base/Meta';
+import React from 'react'
+import Container from '../components/base/Container'
+import H1 from '../components/base/H1'
+import Meta from './base/Meta'
 
-type ErrorProps = {
-  children: React.ReactNode;
-  code: string;
-  src: string;
-  alt: string;
-};
+interface ErrorProps {
+  children: React.ReactNode
+  code: string
+  src: string
+  alt: string
+}
 
-const Error = (props: ErrorProps) => (
-  <>
+function Error(props: ErrorProps) {
+  return <>
     <Meta title={props.code} noindex />
 
     <Container className="flex h-full flex-col items-center justify-center gap-6">
@@ -24,6 +24,6 @@ const Error = (props: ErrorProps) => (
       <p>{props.children}</p>
     </Container>
   </>
-);
+}
 
-export default Error;
+export default Error

@@ -1,40 +1,42 @@
-import Head from 'next/head';
-import React, { useEffect } from 'react';
+import Head from 'next/head'
+import React, { useEffect } from 'react'
 
-type MetaProps = {
-  description?: string;
-  lang?: string;
-  locale?: string;
-  noindex?: boolean;
-  src?: string;
-  title?: string;
-  keywords?: string[];
-};
+interface MetaProps {
+  description?: string
+  lang?: string
+  locale?: string
+  noindex?: boolean
+  src?: string
+  title?: string
+  keywords?: string[]
+}
 
-const Meta = (props: MetaProps) => {
-  const getTitle = React.useCallback(() => (props.title ? `${props.title} - Kayn.ooo` : 'Kayn.ooo'), [props.title]);
+function Meta(props: MetaProps) {
+  const getTitle = React.useCallback(() => (props.title ? `${props.title} - Kayn.ooo` : 'Kayn.ooo'), [props.title])
   const getDesc = React.useCallback(
     () =>
       props.description
         ? props.description
         : 'A website by Kevyn Fyleyssant. A place to share my projects and random things.',
     [props.description],
-  );
+  )
 
   const getUrl = React.useCallback(() => {
-    if (typeof window === 'undefined') return 'https://kayn.ooo';
-    return window.location.href;
-  }, []);
+    if (typeof window === 'undefined')
+      return 'https://kayn.ooo'
+    return window.location.href
+  }, [])
 
   const getCanonical = React.useCallback(() => {
-    if (typeof window === 'undefined') return 'https://kayn.ooo';
-    const url = new URL(window.location.href);
-    return url.origin + url.pathname;
-  }, []);
+    if (typeof window === 'undefined')
+      return 'https://kayn.ooo'
+    const url = new URL(window.location.href)
+    return url.origin + url.pathname
+  }, [])
 
   useEffect(() => {
-    document.querySelector('html')?.setAttribute('lang', props.lang || 'en');
-  }, [props.lang]);
+    document.querySelector('html')?.setAttribute('lang', props.lang || 'en')
+  }, [props.lang])
 
   return (
     <Head>
@@ -67,7 +69,7 @@ const Meta = (props: MetaProps) => {
 
       <link rel="icon" href="/favicon.ico" />
     </Head>
-  );
-};
+  )
+}
 
-export default Meta;
+export default Meta

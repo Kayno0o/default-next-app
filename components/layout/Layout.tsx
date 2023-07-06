@@ -1,13 +1,14 @@
-import React, { ReactElement } from 'react';
-import Footer from './inc/Footer';
-import Header from './inc/Header';
-import { twMerge } from 'tailwind-merge';
+import type { ReactElement } from 'react'
+import React from 'react'
+import { twMerge } from 'tailwind-merge'
+import Footer from './inc/Footer'
+import Header from './inc/Header'
 
-export type LayoutProps = {
-  children: React.ReactNode;
-};
+export interface LayoutProps {
+  children: React.ReactNode
+}
 
-const Layout = (props: LayoutProps): ReactElement => {
+function Layout(props: LayoutProps): ReactElement {
   return (
     <div
       className={twMerge(
@@ -21,7 +22,7 @@ const Layout = (props: LayoutProps): ReactElement => {
 
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

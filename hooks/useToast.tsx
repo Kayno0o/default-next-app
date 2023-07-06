@@ -1,14 +1,13 @@
-import React from 'react';
-import { ToastContext } from '../components/base/ToastManager';
+import React from 'react'
+import { ToastContext } from '../components/base/ToastManager'
 
-const useToast = () => {
-  const context = React.useContext(ToastContext);
+function useToast() {
+  const context = React.useContext(ToastContext)
 
-  if (context === undefined) {
-    throw new Error('useToast must be used within a ToastManager');
-  }
+  if (context === undefined)
+    throw new Error('useToast must be used within a ToastManager')
 
-  return context;
-};
+  return context
+}
 
-export default useToast;
+export default useToast

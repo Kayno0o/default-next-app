@@ -1,17 +1,18 @@
-import React from 'react';
-import { ToastColor, ToastType } from '../../types/toast';
-import { twMerge } from 'tailwind-merge';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import React from 'react'
+import { twMerge } from 'tailwind-merge'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import { ToastColor } from '../../types/toast'
+import type { ToastType } from '../../types/toast'
 
-type ToastProps = {
-  message: string;
-  open: boolean;
-  removeToast: () => void;
-  type: ToastType;
-};
+interface ToastProps {
+  message: string
+  open: boolean
+  removeToast: () => void
+  type: ToastType
+}
 
-const Toast = (props: ToastProps) => {
+function Toast(props: ToastProps) {
   return (
     <>
       <div
@@ -33,7 +34,7 @@ const Toast = (props: ToastProps) => {
         />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Toast;
+export default Toast

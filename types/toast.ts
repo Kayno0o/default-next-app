@@ -1,19 +1,19 @@
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import type { IconProp } from '@fortawesome/fontawesome-svg-core'
 import {
   faCheckCircle,
   faExclamationCircle,
   faExclamationTriangle,
   faInfoCircle,
-} from '@fortawesome/free-solid-svg-icons';
+} from '@fortawesome/free-solid-svg-icons'
 
 export class ToastClass {
-  message: string;
-  type: ToastType;
-  open = true;
+  message: string
+  type: ToastType
+  open = true
 
   constructor(message: string, type: ToastType) {
-    this.message = message;
-    this.type = type;
+    this.message = message
+    this.type = type
   }
 }
 
@@ -42,8 +42,8 @@ export const ToastColor: { [type in ToastType]: ToastColorType } = {
     icon: faExclamationTriangle,
     text: 'text-amber-500',
   },
-};
+}
 
-export type ToastColorType = { bg: string; border: string; icon: IconProp; text: string };
+export interface ToastColorType { bg: string; border: string; icon: IconProp; text: string }
 
-export type ToastType = 'success' | 'error' | 'info' | 'warning';
+export type ToastType = 'success' | 'error' | 'info' | 'warning'

@@ -1,13 +1,13 @@
-import React from 'react';
-import BaseLink from '../../base/BaseLink';
-import { twMerge } from 'tailwind-merge';
+import React from 'react'
+import { twMerge } from 'tailwind-merge'
+import BaseLink from '../../base/BaseLink'
 
-type NavBarProps = {
-  burger: boolean;
-  setBurger: React.Dispatch<React.SetStateAction<boolean>>;
-};
+interface NavBarProps {
+  burger: boolean
+  setBurger: React.Dispatch<React.SetStateAction<boolean>>
+}
 
-const NavBar = (props: NavBarProps) => {
+function NavBar(props: NavBarProps) {
   return (
     <nav
       className={twMerge(
@@ -19,7 +19,7 @@ const NavBar = (props: NavBarProps) => {
         Home
       </BaseLink>
     </nav>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar

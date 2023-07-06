@@ -8,13 +8,7 @@
     "browser": true,
     "es2021": true
   },
-  "extends": [
-    "plugin:@next/next/recommended",
-    "plugin:prettier/recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
-  ],
-  "parser": "@typescript-eslint/parser",
+  "extends": ["@antfu", "plugin:react-hooks/recommended"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -22,7 +16,6 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "unused-imports", "react", "sort-exports"],
   "rules": {
     "@next/next/no-img-element": "off",
     "no-unused-vars": "off",
@@ -36,12 +29,6 @@
         "argsIgnorePattern": "^_"
       }
     ],
-    "sort-imports": [
-      "warn",
-      {
-        "ignoreDeclarationSort": true
-      }
-    ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "max-lines": [
@@ -51,13 +38,6 @@
         "skipBlankLines": true,
         "skipComments": true
       }
-    ],
-    "sort-exports/sort-exports": [
-      "warn",
-      {
-        "sortDir": "asc"
-      }
-    ],
-    "sort-vars": "warn"
+    ]
   }
 }
